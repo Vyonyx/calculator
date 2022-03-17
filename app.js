@@ -17,8 +17,9 @@ buttons.forEach(element => element.addEventListener('mouseup', () => {
 
 function displayInput(buttonInput) {
     const content = display.textContent;
-    console.log(typeof content);
+    if (content.length >= 6) return
     if (buttonInput == '.' && content.includes('.')) return
+
     display.textContent += `${buttonInput}`;
 }
 
